@@ -9,7 +9,7 @@ import { project, provider } from "../cluster";
 import { ObjectMeta } from "../crd/meta/v1";
 import { Output } from "@pulumi/pulumi";
 
-const image = "ghcr.io/m3o/platform:20211013143352c721a5";
+const image = "ghcr.io/m3o/platform:20211229111437c721a5";
 const imagePullPolicy = "Always";
 const replicas = 2;
 
@@ -600,7 +600,7 @@ export const apiDeployment = new k8s.apps.v1.Deployment(
               ],
               readinessProbe: {
                 tcpSocket: {
-                  port: "api-port"
+                  port: `api-port`
                 },
                 initialDelaySeconds: 5,
                 periodSeconds: 10
@@ -733,7 +733,7 @@ export const proxyDeployment = new k8s.apps.v1.Deployment(
               ],
               readinessProbe: {
                 tcpSocket: {
-                  port: "proxy-port"
+                  port: `proxy-port`
                 },
                 initialDelaySeconds: 5,
                 periodSeconds: 10

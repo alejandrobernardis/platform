@@ -43,7 +43,8 @@ export const externalChart = new k8s.helm.v3.Chart(
         service: {
           loadBalancerIP: externalIP.ipAddress
         },
-        admissionWebhooks: { enabled: false }
+        admissionWebhooks: { enabled: false },
+        replicaCount: 2
       }
     }
   },

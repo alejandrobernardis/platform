@@ -138,9 +138,7 @@ var Profile = &profile.Profile{
 			opentelemetry.DefaultOpenTracer = openTracer
 			opentracing.SetGlobalTracer(openTracer)
 
-			microRuntime.DefaultRuntime = kubernetes.NewRuntime(
-				kubernetes.RuntimeClassName("kata-fc"),
-			)
+			microRuntime.DefaultRuntime = kubernetes.NewRuntime()
 			microBuilder.DefaultBuilder, err = golang.NewBuilder()
 			if err != nil {
 				logger.Fatalf("Error configuring golang builder: %v", err)

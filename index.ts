@@ -1,7 +1,7 @@
 import "./certmanager";
 import "./cluster";
-import "./redis";
 import "./postgres";
+import "./redis";
 import "./micro";
 import "./etcd";
 import "./nginx";
@@ -10,5 +10,4 @@ import "./promscale";
 import "./prometheus";
 import "./monitoring";
 import "./grafana";
-import "./kata";
 import "./mongodb";

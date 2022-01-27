@@ -111,3 +111,9 @@ Go to data.m3o.sh and follow the steps on screen
 ```
 kubectl exec -it cockroach-client -- ./cockroach sql --certs-dir=/certs --host=cockroach-cockroachdb.cockroach
 ```
+
+
+TODO
+update nginx
+nginx.ingress.kubernetes.io/proxy-body-size: 10m
+nginx.org/client-max-body-size: 10m
