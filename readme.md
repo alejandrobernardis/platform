@@ -101,19 +101,3 @@ micro run github.com/m3o/services/signup;
 micro run github.com/m3o/services/status;
 micro run github.com/m3o/services/subscriptions;
 ```
-
-## Configure Metabase
-
-Go to data.m3o.sh and follow the steps on screen
-
-## Connect to the cockroachdb cluster
-
-```
-kubectl exec -it cockroach-client -- ./cockroach sql --certs-dir=/certs --host=cockroach-cockroachdb.cockroach
-```
-
-
-TODO
-update nginx
-nginx.ingress.kubernetes.io/proxy-body-size: 10m
-nginx.org/client-max-body-size: 10m
